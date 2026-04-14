@@ -46,7 +46,7 @@ export default function SafeImage({
           fill ? "absolute inset-0" : ""
         } ${className}`}
       >
-        <span className="font-display text-4xl italic font-bold text-cream/90 select-none">
+        <span className="font-display text-4xl font-bold text-cream/90 select-none">
           {initials}
         </span>
       </div>

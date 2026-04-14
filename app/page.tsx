@@ -6,7 +6,6 @@ import ProjectCard from "@/components/ProjectCard";
 import Magnetic from "@/components/Magnetic";
 import { flagshipProjects } from "@/lib/projects";
 
-// ── Brand logos data ─────────────────────────────────────────────────────────
 const brandLogos = [
   { name: "Samsung R&D", abbr: "Samsung" },
   { name: "United Airlines", abbr: "United" },
@@ -14,7 +13,6 @@ const brandLogos = [
   { name: "TATA AIG", abbr: "TATA AIG" },
 ];
 
-// ── Currently cards ──────────────────────────────────────────────────────────
 const currentlyCards = [
   { label: "Building →", value: "Why.AI", sub: "AI adoption intelligence" },
   { label: "Learning →", value: "Masters' Union", sub: "MBA · Gurugram" },
@@ -34,7 +32,7 @@ export default function Home() {
                 PM + Strategy · Ex-Engineer · AI Builder
               </p>
 
-              <h1 className="font-display text-6xl italic leading-none text-ink md:text-7xl lg:text-8xl">
+              <h1 className="font-display text-6xl leading-[1.05] tracking-tight text-ink md:text-7xl lg:text-8xl">
                 Hey, I&rsquo;m{" "}
                 <span className="relative inline-block">
                   Shivang
@@ -72,16 +70,12 @@ export default function Home() {
             {/* Right — photo placeholder */}
             <div className="flex justify-center md:justify-end">
               <div className="relative">
-                {/* Coral ring */}
                 <div className="absolute -inset-3 rounded-full border-2 border-coral/40" />
-                {/* Float animation wrapper */}
                 <div className="animate-float">
                   <div className="flex h-64 w-64 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-coral/20 to-mustard/20 shadow-2xl md:h-80 md:w-80">
-                    {/* Replace with <Image> once you have a photo */}
-                    <span className="font-display text-7xl italic text-coral/60">SS</span>
+                    <span className="font-display text-7xl tracking-tight text-coral/60">SS</span>
                   </div>
                 </div>
-                {/* Decorative dot */}
                 <div className="absolute -bottom-4 -right-4 h-8 w-8 rounded-full bg-mustard" />
               </div>
             </div>
@@ -98,10 +92,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
               {brandLogos.map((logo) => (
-                <div
-                  key={logo.name}
-                  className="group cursor-default select-none"
-                >
+                <div key={logo.name} className="group cursor-default select-none">
                   <span className="font-sans text-base font-semibold text-ink/30 transition-colors duration-300 group-hover:text-ink">
                     {logo.abbr}
                   </span>
@@ -123,7 +114,7 @@ export default function Home() {
               <p className="font-mono text-xs uppercase tracking-widest text-coral">
                 {card.label}
               </p>
-              <p className="mt-3 font-display text-2xl italic text-ink">
+              <p className="mt-3 font-display text-2xl tracking-tight text-ink">
                 {card.value}
               </p>
               <p className="mt-1 font-sans text-sm text-muted">{card.sub}</p>
@@ -132,23 +123,15 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ── Flagship projects ─────────────────────────────────────────────── */}
+      {/* ── Flagship projects — equal 3-col grid ─────────────────────────── */}
       <Section label="Flagship Work" className="bg-ink/[0.02]">
-        <h2 className="mb-12 font-display text-4xl italic text-ink md:text-5xl">
+        <h2 className="mb-12 font-display text-4xl tracking-tight text-ink md:text-5xl">
           Work I&rsquo;m proud of.
         </h2>
-        {/* Asymmetric editorial layout */}
-        <div className="grid gap-6 md:grid-cols-5">
-          {/* First card — wide */}
-          <div className="md:col-span-3">
-            <ProjectCard project={flagshipProjects[0]} className="h-full" />
-          </div>
-          {/* Next two — stacked */}
-          <div className="flex flex-col gap-6 md:col-span-2">
-            {flagshipProjects.slice(1).map((project) => (
-              <ProjectCard key={project.slug} project={project} className="flex-1" />
-            ))}
-          </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {flagshipProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} className="h-full" />
+          ))}
         </div>
         <div className="mt-10 text-center">
           <Link
@@ -167,7 +150,7 @@ export default function Home() {
             <p className="font-mono text-xs uppercase tracking-widest text-muted">
               The story
             </p>
-            <h2 className="mt-4 font-display text-4xl italic leading-tight text-ink md:text-5xl">
+            <h2 className="mt-4 font-display text-4xl leading-tight tracking-tight text-ink md:text-5xl">
               From writing code at Samsung to strategy at Masters&rsquo; Union.
             </h2>
           </div>
@@ -191,30 +174,30 @@ export default function Home() {
       <section className="bg-ink py-24">
         <Container>
           <div className="flex flex-col items-center gap-8 text-center">
-            <h2 className="font-display text-5xl italic text-cream md:text-7xl">
+            <h2 className="font-display text-5xl tracking-tight text-cream md:text-7xl">
               Let&rsquo;s build something
               <span className="text-coral">.</span>
             </h2>
             <p className="max-w-md font-sans text-base text-cream/60">
-              Looking for PM / Strategy roles starting 2025. Open to interesting problems
+              Looking for PM and Strategy roles. Open to interesting problems
               in AI, consumer, and B2B.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Magnetic>
                 <a
-                  href="mailto:shivang@example.com"
+                  href="mailto:tbm26shivang.sharma@mastersunion.org"
                   className="inline-flex items-center gap-2 rounded-full bg-coral px-7 py-3.5 font-sans text-sm font-medium text-cream transition-colors hover:bg-mustard hover:text-ink"
                 >
                   <Mail className="h-4 w-4" /> Send an email
                 </a>
               </Magnetic>
               <Magnetic>
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center gap-2 rounded-full border border-cream/20 px-7 py-3.5 font-sans text-sm font-medium text-cream transition-all hover:border-cream hover:bg-cream hover:text-ink"
                 >
                   <Calendar className="h-4 w-4" /> Book a chat
-                </a>
+                </Link>
               </Magnetic>
             </div>
           </div>

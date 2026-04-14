@@ -5,7 +5,19 @@
       "Bash(npm run:*)",
       "Bash(node -e \"const icons = require\\('lucide-react'\\); console.log\\(Object.keys\\(icons\\).filter\\(k => /git/i.test\\(k\\)\\)\\)\")",
       "Bash(git add:*)",
-      "Bash(git commit -m ':*)"
+      "Bash(git commit -m ':*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(npm install:*)",
+      "Bash(npx vercel:*)",
+      "Read(//Users/shivangsharma/.local/share/**)",
+      "Read(//Users/shivangsharma/.config/**)",
+      "Read(//Users/shivangsharma/**)",
+      "Bash(curl -s https://api.vercel.com/v9/projects/shivang-portfolio -H 'Authorization: Bearer vca_7rsHb7KfoOfMlxMQ33N5n5ydtxUGcYoVxCK130bugjYGAaKMwz36rntF')",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d.get\\('id',''\\), d.get\\('name',''\\)\\)\")",
+      "Bash(curl -s -X DELETE https://api.vercel.com/v9/projects/prj_NT5SqJfWdd4EqrN8MCQL8f3GAO5E -H 'Authorization: Bearer vca_7rsHb7KfoOfMlxMQ33N5n5ydtxUGcYoVxCK130bugjYGAaKMwz36rntF' -w '\\\\nHTTP status: %{http_code}')",
+      "Bash(npm list:*)"
     ]
   }
 }

@@ -17,7 +17,7 @@ export default function JourneyPage() {
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-muted">
             My Journey
           </p>
-          <h1 className="mt-4 font-display text-5xl italic leading-tight text-ink md:text-6xl">
+          <h1 className="mt-4 font-display text-5xl leading-[1.05] tracking-tight text-ink md:text-6xl">
             From writing code to{" "}
             <span className="text-coral">shaping products.</span>
           </h1>

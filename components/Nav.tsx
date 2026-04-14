@@ -10,6 +10,7 @@ const links = [
   { href: "/journey", label: "Journey" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
+  { href: "/resume", label: "Resume" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -81,7 +82,7 @@ export default function Nav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-display text-4xl italic text-ink hover:text-coral"
+                  className="font-display text-4xl tracking-tight text-ink hover:text-coral"
                 >
                   {link.label}
                 </Link>

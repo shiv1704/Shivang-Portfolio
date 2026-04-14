@@ -12,13 +12,35 @@ type ProjectCardProps = {
   className?: string;
 };
 
-function getInitials(title: string) {
-  return title
-    .split(" ")
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("")
-    .toUpperCase();
+// Initials from company name: camelCase + dot-split aware, max 2 chars
+function getCompanyInitials(company: string): string {
+  const segments = company
+    .replace(/([a-z])([A-Z])/g, "$1 $2") // camelCase → "Sales Gen"
+    .replace(/[.\-_]/g, " ")              // dots/dashes → spaces
+    .trim()
+    .split(/\s+/)
+    .filter((s) => s.length > 0 && !/^\d+$/.test(s)); // drop pure numbers
+
+  if (segments.length === 0) return "??";
+
+  const first = segments[0];
+
+  // Short all-caps acronym as first word (e.g. "EY", "LA"): use it whole
+  if (
+    segments.length >= 2 &&
+    first.length === 2 &&
+    /^[A-Z]+$/.test(first)
+  ) {
+    return first;
+  }
+
+  // Multiple segments: first letter of each of the first two
+  if (segments.length >= 2) {
+    return (first[0] + segments[1][0]).toUpperCase();
+  }
+
+  // Single segment: first two letters
+  return first.slice(0, 2).toUpperCase();
 }
 
 export default function ProjectCard({ project, className = "" }: ProjectCardProps) {
@@ -33,18 +55,18 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
     >
       {/* Image / placeholder */}
       <div className="relative flex h-52 items-center justify-center overflow-hidden">
-        {/* Coral placeholder — always rendered, hidden under real image */}
+        {/* Coral placeholder */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center bg-coral"
           whileHover={{ scale: 1.04, rotate: 1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
-          <span className="font-display text-5xl italic font-bold text-cream/90 select-none">
-            {getInitials(project.title)}
+          <span className="font-display text-5xl font-bold text-cream/90 select-none">
+            {getCompanyInitials(project.company)}
           </span>
         </motion.div>
 
-        {/* Real image — sits on top, hides coral when loaded */}
+        {/* Real image layer */}
         {!imgErrored && (
           <Image
             src={project.coverImage}
@@ -64,30 +86,25 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
 
       {/* Content */}
       <div className="flex flex-1 flex-col gap-3 p-6">
-        {/* Category */}
         <span className="font-mono text-xs uppercase tracking-widest text-coral">
           {project.category}
         </span>
 
-        {/* Title */}
-        <h3 className="font-display text-2xl italic leading-tight text-ink">
+        <h3 className="font-display text-2xl leading-tight tracking-tight text-ink">
           {project.title}
         </h3>
 
-        {/* Company */}
         <p className="font-sans text-sm text-muted">{project.company}</p>
 
-        {/* Tagline */}
-        <p className="font-sans text-sm leading-relaxed text-ink/80">
+        <p className="font-sans text-sm leading-relaxed text-ink/80 line-clamp-2">
           {project.tagline}
         </p>
 
-        {/* Role pill */}
         <span className="w-fit rounded-full border border-ink/10 px-3 py-1 font-mono text-xs text-muted">
           {project.role}
         </span>
 
-        {/* CTA row */}
+        {/* CTA row — always at bottom */}
         <div className="mt-auto flex flex-wrap items-center gap-3 border-t border-ink/5 pt-4">
           {hasDecks ? (
             <a
@@ -100,7 +117,7 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
               View deck →
             </a>
           ) : (
-            <span className="inline-flex items-center gap-1.5 font-mono text-xs text-muted/60 italic">
+            <span className="inline-flex items-center gap-1.5 font-mono text-xs text-muted/60">
               Deck coming soon
             </span>
           )}

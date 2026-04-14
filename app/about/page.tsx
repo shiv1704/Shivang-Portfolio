@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 import SafeImage from "@/components/SafeImage";
 
 export const metadata = {
-  title: "About — Shivang Sharma",
+  title: "About",
   description:
     "Ex-software engineer turned product strategist. MBA at Masters' Union. Building Why.AI.",
 };
@@ -33,26 +33,10 @@ const skills = [
 ];
 
 const beyondWork = [
-  {
-    image: "/images/hero/beyond-1.jpg",
-    caption: "Winning together on the field",
-    fallback: "Team",
-  },
-  {
-    image: "/images/hero/beyond-2.jpg",
-    caption: "My constant companion",
-    fallback: "Life",
-  },
-  {
-    image: "/images/hero/beyond-3.jpg",
-    caption: "Built & sold at scale",
-    fallback: "Work",
-  },
-  {
-    image: "/images/hero/beyond-4.jpg",
-    caption: "Leading the Netflix Fraternity",
-    fallback: "Lead",
-  },
+  { image: "/images/hero/beyond-1.jpg", caption: "Winning together on the field", fallback: "Team" },
+  { image: "/images/hero/beyond-2.jpg", caption: "My constant companion", fallback: "Life" },
+  { image: "/images/hero/beyond-3.jpg", caption: "Built and sold at scale", fallback: "Work" },
+  { image: "/images/hero/beyond-4.jpg", caption: "Leading the Netflix Fraternity", fallback: "Lead" },
 ];
 
 const reading = [
@@ -68,28 +52,26 @@ export default function AboutPage() {
       <section className="py-20">
         <Container>
           <div className="grid items-start gap-16 md:grid-cols-2">
-            {/* Left */}
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.25em] text-muted">About</p>
-              <h1 className="mt-4 font-display text-5xl italic leading-tight text-ink md:text-6xl">
+              <h1 className="mt-4 font-display text-5xl leading-[1.05] tracking-tight text-ink md:text-6xl">
                 Ex-engineer. Product-obsessed.{" "}
                 <span className="text-coral">Still learning.</span>
               </h1>
 
               <div className="mt-8 flex flex-col gap-5 font-sans text-base leading-relaxed text-ink/70">
                 <p>
-                  I spent four years writing automation code at Samsung R&D and United Airlines — shipping features that touched millions of devices and keeping pricing infrastructure running for a global airline. Engineering taught me how to think in systems, break down complexity, and care deeply about the person on the other end of the product.
+                  I spent four years writing automation code at Samsung R&D and United Airlines. Shipping features that touched millions of devices and keeping pricing infrastructure running for a global airline. Engineering taught me how to think in systems, break down complexity, and care deeply about the person on the other end of the product.
                 </p>
                 <p>
-                  At Masters&rsquo; Union, I made the pivot I&rsquo;d been building toward for years. Not because I stopped loving technology — but because I realised the problems I wanted to solve lived at the intersection of technology, people, and markets. That&rsquo;s product.
+                  At Masters&rsquo; Union, I made the pivot I&rsquo;d been building toward for years. Not because I stopped loving technology, but because I realised the problems I wanted to solve lived at the intersection of technology, people, and markets. That&rsquo;s product.
                 </p>
                 <p>
-                  Right now I&rsquo;m building Why.AI, running the Netflix Fraternity, and thinking hard about how AI actually changes the way organisations work — not in theory, but in practice. I&rsquo;m looking for PM and product strategy roles where I can bring both the engineering depth and the strategic lens.
+                  Right now I&rsquo;m building Why.AI, running the Netflix Fraternity, and thinking hard about how AI actually changes the way organisations work, not in theory but in practice. I&rsquo;m looking for PM and product strategy roles where I can bring both the engineering depth and the strategic lens.
                 </p>
               </div>
             </div>
 
-            {/* Right — photo */}
             <div className="flex justify-center md:justify-end">
               <div className="relative h-80 w-80 overflow-hidden rounded-2xl shadow-2xl">
                 <SafeImage
@@ -113,9 +95,9 @@ export default function AboutPage() {
           <div className="grid gap-12 md:grid-cols-2">
             <div>
               <p className="font-mono text-xs uppercase tracking-widest text-muted">Skills</p>
-              <h2 className="mt-3 font-display text-4xl italic text-ink">What I bring.</h2>
+              <h2 className="mt-3 font-display text-4xl tracking-tight text-ink">What I bring.</h2>
               <p className="mt-4 font-sans text-base text-ink/60">
-                Four years of engineering fluency, now applied to product thinking. I can go deep on the technical side and broad on the strategic side — and know when each is needed.
+                Four years of engineering fluency, now applied to product thinking. I can go deep on the technical side and broad on the strategic side, knowing when each is needed.
               </p>
             </div>
 
@@ -146,7 +128,7 @@ export default function AboutPage() {
       <section className="py-20">
         <Container>
           <p className="font-mono text-xs uppercase tracking-widest text-muted">Beyond work</p>
-          <h2 className="mt-3 mb-10 font-display text-4xl italic text-ink">
+          <h2 className="mt-3 mb-10 font-display text-4xl tracking-tight text-ink">
             The rest of the picture.
           </h2>
 
@@ -173,19 +155,14 @@ export default function AboutPage() {
       {/* ── Reading / listening ───────────────────────────────────────────── */}
       <section className="border-t border-ink/8 py-16">
         <Container>
-          <p className="font-mono text-xs uppercase tracking-widest text-muted">
-            Right now
-          </p>
-          <h2 className="mt-3 mb-8 font-display text-3xl italic text-ink">
+          <p className="font-mono text-xs uppercase tracking-widest text-muted">Right now</p>
+          <h2 className="mt-3 mb-8 font-display text-3xl tracking-tight text-ink">
             What I&rsquo;m reading &amp; listening to.
           </h2>
 
           <div className="flex flex-wrap gap-4">
             {reading.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-ink/10 bg-white px-5 py-4"
-              >
+              <div key={item.title} className="rounded-xl border border-ink/10 bg-white px-5 py-4">
                 <p className="font-mono text-[10px] uppercase tracking-widest text-coral">
                   {item.type}
                 </p>
@@ -202,11 +179,11 @@ export default function AboutPage() {
         <Container>
           <div className="flex items-center justify-between gap-8 rounded-2xl bg-ink px-10 py-10">
             <div>
-              <h2 className="font-display text-3xl italic text-cream">
+              <h2 className="font-display text-3xl tracking-tight text-cream">
                 Think we&rsquo;d work well together?
               </h2>
               <p className="mt-2 font-sans text-sm text-cream/60">
-                I&rsquo;m actively looking for PM and product strategy roles starting 2025.
+                I&rsquo;m actively looking for PM and product strategy roles.
               </p>
             </div>
             <Link

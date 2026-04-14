@@ -22,7 +22,7 @@ export default function ProjectsPage() {
           <p className="font-mono text-xs uppercase tracking-widest text-muted">
             All work
           </p>
-          <h1 className="mt-4 font-display text-5xl italic text-ink md:text-6xl">
+          <h1 className="mt-4 font-display text-5xl tracking-tight text-ink md:text-6xl">
             Projects
           </h1>
           <p className="mt-4 max-w-lg font-sans text-base text-muted">

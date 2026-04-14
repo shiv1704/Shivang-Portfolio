@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
 
 export const metadata = {
-  title: "Contact — Shivang Sharma",
+  title: "Contact",
   description: "Book a chat, send an email, or connect on LinkedIn.",
 };
 
@@ -13,28 +13,24 @@ const contactLinks = [
     value: "tbm26shivang.sharma@mastersunion.org",
     href: "mailto:tbm26shivang.sharma@mastersunion.org",
     Icon: Mail,
-    copyable: true,
   },
   {
     label: "LinkedIn",
     value: "/in/shivang-sharma-pu",
     href: "https://linkedin.com/in/shivang-sharma-pu",
     Icon: Link2,
-    copyable: false,
   },
   {
     label: "GitHub",
     value: "github.com/shiv1704",
     href: "https://github.com/shiv1704",
     Icon: Code2,
-    copyable: false,
   },
   {
     label: "Phone",
     value: "+91 82798 01049",
     href: "tel:+918279801049",
     Icon: Phone,
-    copyable: true,
   },
 ];
 
@@ -47,12 +43,12 @@ export default function ContactPage() {
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-muted">
             Get in touch
           </p>
-          <h1 className="mt-4 font-display text-5xl italic leading-tight text-ink md:text-6xl">
+          <h1 className="mt-4 font-display text-5xl leading-[1.05] tracking-tight text-ink md:text-6xl">
             Let&rsquo;s build something<span className="text-coral">.</span>
           </h1>
           <p className="mt-6 font-sans text-lg leading-relaxed text-ink/70">
             I&rsquo;m looking for PM and product strategy roles post-MBA. If you&rsquo;re
-            hiring, exploring a problem together, or just want to chat — I&rsquo;d love to
+            hiring, exploring a problem together, or just want to chat. I&rsquo;d love to
             hear from you.
           </p>
         </div>
@@ -94,9 +90,8 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Footer note */}
         <p className="font-mono text-sm text-muted/60 text-center">
-          Currently based in Delhi &middot; Open to relocation for the right role.
+          Currently based in Delhi · Open to relocation for the right role.
         </p>
       </Container>
     </div>

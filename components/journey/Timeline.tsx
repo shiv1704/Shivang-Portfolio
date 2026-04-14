@@ -136,7 +136,7 @@ export default function Timeline() {
               {/* Card */}
               <div className="pb-8 flex-1">
                 <p className="font-mono text-xs text-muted/60 mb-1">{milestone.year}</p>
-                <h3 className="font-display text-xl italic text-ink">{milestone.title}</h3>
+                <h3 className="font-display text-xl tracking-tight text-ink">{milestone.title}</h3>
                 <p className="font-sans text-sm text-muted mb-2">{milestone.subtitle}</p>
                 <p className="font-sans text-sm leading-relaxed text-ink/70 mb-3">
                   {milestone.body}

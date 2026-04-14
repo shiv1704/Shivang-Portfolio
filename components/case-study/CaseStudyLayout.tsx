@@ -50,7 +50,7 @@ export default function CaseStudyLayout({
           <span className="font-mono text-xs uppercase tracking-widest text-coral">
             {category}
           </span>
-          <h1 className="mt-3 font-display text-5xl italic leading-tight text-ink md:text-6xl lg:text-7xl">
+          <h1 className="mt-3 font-display text-5xl leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
             {title}
           </h1>
           <p className="mt-4 font-sans text-lg leading-relaxed text-muted md:text-xl">
@@ -59,26 +59,18 @@ export default function CaseStudyLayout({
 
           {/* Meta row */}
           <div className="mt-8 flex flex-wrap gap-3">
-            {meta.role && (
-              <MetaChip label="Role" value={meta.role} />
-            )}
-            {meta.team && (
-              <MetaChip label="Team" value={meta.team} />
-            )}
-            {meta.timeline && (
-              <MetaChip label="Timeline" value={meta.timeline} />
-            )}
-            {meta.outcome && (
-              <MetaChip label="Outcome" value={meta.outcome} />
-            )}
+            {meta.role && <MetaChip label="Role" value={meta.role} />}
+            {meta.team && <MetaChip label="Team" value={meta.team} />}
+            {meta.timeline && <MetaChip label="Timeline" value={meta.timeline} />}
+            {meta.outcome && <MetaChip label="Outcome" value={meta.outcome} />}
           </div>
         </div>
 
         {/* Deck embed */}
         {deckUrl && <CollapsibleDeck url={deckUrl} title={title} />}
 
-        {/* MDX content */}
-        <div className="prose prose-lg max-w-3xl prose-headings:font-display prose-headings:italic prose-headings:font-normal prose-headings:text-ink prose-p:text-ink/75 prose-p:font-sans prose-p:leading-relaxed prose-a:text-coral prose-a:no-underline hover:prose-a:underline prose-strong:text-ink prose-li:text-ink/75 prose-li:font-sans">
+        {/* MDX content — prose-headings:not-italic removes default italic from headings */}
+        <div className="prose prose-lg max-w-3xl prose-headings:font-display prose-headings:font-normal prose-headings:tracking-tight prose-headings:not-italic prose-headings:text-ink prose-p:text-ink/75 prose-p:font-sans prose-p:leading-relaxed prose-a:text-coral prose-a:no-underline hover:prose-a:underline prose-strong:text-ink prose-li:text-ink/75 prose-li:font-sans">
           {children}
         </div>
 
@@ -90,7 +82,7 @@ export default function CaseStudyLayout({
             </p>
             <Link
               href={`/projects/${nextProject.slug}`}
-              className="group mt-3 inline-flex items-center gap-3 font-display text-3xl italic text-ink hover:text-coral transition-colors"
+              className="group mt-3 inline-flex items-center gap-3 font-display text-3xl tracking-tight text-ink hover:text-coral transition-colors"
             >
               {nextProject.title}
               <ArrowRight className="h-6 w-6 transition-transform group-hover:translate-x-1" />
@@ -100,7 +92,7 @@ export default function CaseStudyLayout({
 
         {/* Contact CTA */}
         <div className="mt-16 rounded-2xl bg-ink px-10 py-10">
-          <p className="font-display text-2xl italic text-cream">
+          <p className="font-display text-2xl tracking-tight text-cream">
             Want to talk about this work?
           </p>
           <p className="mt-2 font-sans text-sm text-cream/60">

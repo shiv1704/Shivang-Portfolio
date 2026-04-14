@@ -50,7 +50,7 @@ export default function MilestoneCard({ milestone }: MilestoneCardProps) {
             </div>
 
             <div>
-              <h3 className="font-display text-3xl italic leading-tight text-ink">
+              <h3 className="font-display text-3xl leading-tight tracking-tight text-ink">
                 {milestone.title}
               </h3>
               <p className="mt-1 font-sans text-base text-muted">{milestone.subtitle}</p>

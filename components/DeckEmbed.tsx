@@ -21,7 +21,7 @@ export default function DeckEmbed({
     return (
       <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-ink/15 bg-cream py-20 text-center">
         <Presentation className="mb-4 h-10 w-10 text-muted/40" />
-        <p className="font-display text-xl italic text-muted">Deck coming soon</p>
+        <p className="font-display text-xl tracking-tight text-muted">Deck coming soon</p>
         <p className="mt-2 font-sans text-sm text-muted/60">
           Add the{" "}
           <code className="rounded bg-ink/5 px-1.5 py-0.5 font-mono text-xs">

@@ -102,7 +102,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
           <span className="font-mono text-xs uppercase tracking-widest text-coral">
             {project.category}
           </span>
-          <h1 className="mt-3 font-display text-5xl italic leading-tight text-ink md:text-6xl">
+          <h1 className="mt-3 font-display text-5xl leading-[1.05] tracking-tight text-ink md:text-6xl">
             {project.title}
           </h1>
           <p className="mt-3 font-sans text-base text-muted">{project.company}</p>
@@ -128,7 +128,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
         )}
 
         <div className="flex flex-col items-center rounded-2xl border border-dashed border-ink/15 py-16 text-center">
-          <p className="font-display text-2xl italic text-muted">Full case study coming soon.</p>
+          <p className="font-display text-2xl tracking-tight text-muted">Full case study coming soon.</p>
           <p className="mt-3 max-w-sm font-sans text-sm text-muted/60">
             The deck above has the full breakdown. Reach out if you&rsquo;d like to discuss this project directly.
           </p>
