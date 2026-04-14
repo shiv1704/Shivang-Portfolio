@@ -12,19 +12,19 @@ export const metadata = {
 const skills = [
   {
     category: "Product & Strategy",
-    items: ["Product teardowns", "GTM strategy", "Positioning", "Roadmapping", "User research"],
+    items: ["PRD", "Product teardowns", "GTM strategy", "Positioning", "Roadmapping", "User research"],
   },
   {
     category: "AI & Tech",
-    items: ["Claude API", "Agentic systems", "Prompt engineering", "Next.js", "TypeScript", "Supabase"],
+    items: ["Claude API", "LLM Models", "Agentic systems", "Prompt engineering", "Next.js", "TypeScript", "Python", "Java", "Supabase"],
   },
   {
     category: "Design & Prototyping",
-    items: ["Figma", "Lovable", "v0", "Rapid prototyping"],
+    items: ["Figma", "Lovable", "Claude Code", "Rapid prototyping"],
   },
   {
     category: "Analysis",
-    items: ["PowerBI", "SQL", "Market sizing", "Competitive analysis"],
+    items: ["PowerBI", "SQL", "JIRA", "Mixpanel", "Github", "Market sizing", "Competitive analysis"],
   },
   {
     category: "Leadership",
@@ -40,9 +40,9 @@ const beyondWork = [
 ];
 
 const reading = [
-  { type: "Reading", title: "The Innovator's Dilemma", author: "Clayton Christensen" },
-  { type: "Listening", title: "Acquired Podcast", author: "Ben & David" },
-  { type: "Watching", title: "How I Built This", author: "Guy Raz / NPR" },
+  { type: "Reading", title: "Product Newsletter", author: "Substack" },
+  { type: "Listening", title: "Lenny's Podcast", author: "Lenny Rachitsky" },
+  { type: "Watching", title: "Marty Cagan / Aakash Gupta", author: "YouTube" },
 ];
 
 export default function AboutPage() {

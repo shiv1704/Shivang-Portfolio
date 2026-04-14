@@ -218,7 +218,7 @@ export const projects: Project[] = [
     role: "Ad Strategist",
     deckUrl: "https://drive.google.com/file/d/1O-4o5-5XaMpGqVTr4HSQme_HWyN74WZb/view",
     isFlagship: false,
-    coverImage: "/images/projects/ferragamo/cover.jpg",
+    coverImage: "/images/projects/ferragamo/cover.webp",
   },
   {
     slug: "fogg",
@@ -230,7 +230,7 @@ export const projects: Project[] = [
     role: "Ad Strategist",
     deckUrl: "https://drive.google.com/file/d/1Yg5pRh32j-4MtsFQnTVyIXuokHQqvQHm/view?usp=sharing",
     isFlagship: false,
-    coverImage: "/images/projects/fogg/cover.jpg",
+    coverImage: "/images/projects/fogg/cover.webp",
   },
   {
     slug: "the-whole-truth",
@@ -242,7 +242,7 @@ export const projects: Project[] = [
     role: "Ad Strategist",
     deckUrl: "https://drive.google.com/file/d/1_WV3p6wkwIQLK0yIPiICdxgOVsvMqlo3/view",
     isFlagship: false,
-    coverImage: "/images/projects/the-whole-truth/cover.jpg",
+    coverImage: "/images/projects/the-whole-truth/cover.png",
   },
 ];
 
