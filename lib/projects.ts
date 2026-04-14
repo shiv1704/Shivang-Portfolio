@@ -6,7 +6,8 @@ export type ProjectCategory =
   | "Product Teardown"
   | "Marketing"
   | "Consumer Product"
-  | "D2C / Founder";
+  | "D2C / Founder"
+  | "Ad Creative";
 
 export type Project = {
   slug: string;
@@ -205,11 +206,50 @@ export const projects: Project[] = [
     isFlagship: false,
     coverImage: "/images/projects/vittavishwas/cover.png",
   },
+
+  // ── Ad Creative ───────────────────────────────────────────────────────────
+  {
+    slug: "ferragamo",
+    title: "Ferragamo Fragrance Ad",
+    company: "Salvatore Ferragamo",
+    category: "Ad Creative",
+    tagline: "Consumer behaviour positioning for a luxury fragrance: aspiration meets identity.",
+    year: "2025",
+    role: "Ad Strategist",
+    deckUrl: "PLACEHOLDER_FERRAGAMO_DRIVE_URL",
+    isFlagship: false,
+    coverImage: "/images/projects/ferragamo/cover.jpg",
+  },
+  {
+    slug: "fogg",
+    title: "Fogg Fragrance Ad",
+    company: "Fogg",
+    category: "Ad Creative",
+    tagline: "Repositioning a mass-market fragrance around value-driven consumer behaviour.",
+    year: "2025",
+    role: "Ad Strategist",
+    deckUrl: "PLACEHOLDER_FOGG_DRIVE_URL",
+    isFlagship: false,
+    coverImage: "/images/projects/fogg/cover.jpg",
+  },
+  {
+    slug: "the-whole-truth",
+    title: "The Whole Truth Ad",
+    company: "The Whole Truth",
+    category: "Ad Creative",
+    tagline: "Clean-label positioning in a cluttered supplement market: radical honesty as brand strategy.",
+    year: "2025",
+    role: "Ad Strategist",
+    deckUrl: "PLACEHOLDER_WHOLE_TRUTH_DRIVE_URL",
+    isFlagship: false,
+    coverImage: "/images/projects/the-whole-truth/cover.jpg",
+  },
 ];
 
 export const ALL_CATEGORIES: ProjectCategory[] = [
   "AI Product",
   "D2C / Founder",
+  "Ad Creative",
   "Brand Strategy",
   "Product Growth",
   "GTM",
