@@ -8,10 +8,10 @@ import Magnetic from "@/components/Magnetic";
 import { flagshipProjects } from "@/lib/projects";
 
 const brandLogos = [
-  { name: "Samsung R&D", abbr: "Samsung" },
-  { name: "United Airlines", abbr: "United" },
-  { name: "Newgen", abbr: "Newgen" },
-  { name: "TATA AIG", abbr: "TATA AIG" },
+  { name: "Samsung R&D", abbr: "SAMSUNG R&D" },
+  { name: "United Airlines", abbr: "UNITED AIRLINES" },
+  { name: "Newgen Software", abbr: "NEWGEN SOFTWARE" },
+  { name: "TATA AIG Insurance", abbr: "TATA AIG INSURANCE" },
 ];
 
 const currentlyCards = [
@@ -146,7 +146,7 @@ export default function Home() {
             href="/projects"
             className="inline-flex items-center gap-2 font-sans text-sm text-muted underline underline-offset-4 hover:text-coral"
           >
-            See all 14 projects <ArrowRight className="h-3.5 w-3.5" />
+            See all 18 projects <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
       </Section>

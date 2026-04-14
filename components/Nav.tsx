@@ -43,12 +43,6 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="rounded-full bg-ink px-5 py-2 font-sans text-sm text-cream transition-colors hover:bg-coral"
-            >
-              Let&rsquo;s talk
-            </Link>
           </nav>
 
           {/* Hamburger */}
@@ -88,15 +82,6 @@ export default function Nav() {
                 </Link>
               ))}
             </nav>
-            <div className="mt-auto pb-12">
-              <Link
-                href="/contact"
-                onClick={() => setMobileOpen(false)}
-                className="inline-block rounded-full bg-coral px-8 py-3 font-sans text-cream"
-              >
-                Let&rsquo;s talk
-              </Link>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
