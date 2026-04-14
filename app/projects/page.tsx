@@ -26,7 +26,7 @@ export default function ProjectsPage() {
             Projects
           </h1>
           <p className="mt-4 max-w-lg font-sans text-base text-muted">
-            14 projects across AI product, brand strategy, growth, and consumer. Filter
+            18 projects across AI product, D2C, brand strategy, ad creative, and more. Filter
             by category below.
           </p>
         </div>

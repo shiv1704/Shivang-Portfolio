@@ -43,9 +43,9 @@ export default function Home() {
 
               <p className="max-w-lg font-sans text-lg leading-relaxed text-ink/70 md:text-xl">
                 Ex-software engineer turned product strategist. Currently at{" "}
-                <span className="font-medium text-ink">Masters&rsquo; Union</span>, building{" "}
-                <span className="font-medium text-coral">Why.AI</span>, and obsessed with how
-                teams actually adopt AI.
+                <span className="font-medium text-ink">Masters&rsquo; Union</span>, building at
+                the intersection of{" "}
+                <span className="font-medium text-coral">AI, product, and business</span>.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
