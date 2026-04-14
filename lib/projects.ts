@@ -5,7 +5,8 @@ export type ProjectCategory =
   | "GTM"
   | "Product Teardown"
   | "Marketing"
-  | "Consumer Product";
+  | "Consumer Product"
+  | "D2C / Founder";
 
 export type Project = {
   slug: string;
@@ -24,16 +25,15 @@ export type Project = {
 export const projects: Project[] = [
   // ── Flagships ──────────────────────────────────────────────────────────────
   {
-    slug: "ey-techathon",
-    title: "Agentic AI for B2B RFPs",
-    company: "EY Techathon 6.0",
-    category: "AI Product",
-    tagline: "Cutting RFP response time from weeks to hours with autonomous AI agents.",
+    slug: "the-ghar-company",
+    title: "The Ghar Company",
+    company: "The Ghar Company",
+    category: "D2C / Founder",
+    tagline: "Built a D2C premium home bedding brand from 0→1: ₹2.4L revenue, 40% margins, 60 days.",
     year: "2025",
-    role: "Product Strategy",
-    deckUrl: "https://drive.google.com/file/d/1nc3ntUOUIvmlqCSbEnywLXrELRK0E1Pm/view",
+    role: "Co-Founder",
     isFlagship: true,
-    coverImage: "/images/projects/ey-techathon/cover.png",
+    coverImage: "/images/projects/the-ghar-company/cover.jpg",
   },
   {
     slug: "why-ai",
@@ -62,6 +62,18 @@ export const projects: Project[] = [
   },
 
   // ── Secondary ──────────────────────────────────────────────────────────────
+  {
+    slug: "ey-techathon",
+    title: "Agentic AI for B2B RFPs",
+    company: "EY Techathon 6.0",
+    category: "AI Product",
+    tagline: "Cutting RFP response time from weeks to hours with autonomous AI agents.",
+    year: "2025",
+    role: "Product Strategy",
+    deckUrl: "https://drive.google.com/file/d/1nc3ntUOUIvmlqCSbEnywLXrELRK0E1Pm/view",
+    isFlagship: false,
+    coverImage: "/images/projects/ey-techathon/cover.png",
+  },
   {
     slug: "perfora",
     title: "Haircare Brand Strategy",
@@ -198,6 +210,7 @@ export const projects: Project[] = [
 
 export const ALL_CATEGORIES: ProjectCategory[] = [
   "AI Product",
+  "D2C / Founder",
   "Brand Strategy",
   "Product Growth",
   "GTM",
