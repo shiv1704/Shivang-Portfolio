@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Mail, Calendar } from "lucide-react";
+import Image from "next/image";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
@@ -67,13 +68,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — photo placeholder */}
+            {/* Right — profile photo */}
             <div className="flex justify-center md:justify-end">
               <div className="relative">
                 <div className="absolute -inset-3 rounded-full border-2 border-coral/40" />
                 <div className="animate-float">
-                  <div className="flex h-64 w-64 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-coral/20 to-mustard/20 shadow-2xl md:h-80 md:w-80">
-                    <span className="font-display text-7xl tracking-tight text-coral/60">SS</span>
+                  <div className="relative h-64 w-64 overflow-hidden rounded-full shadow-2xl md:h-80 md:w-80">
+                    <Image
+                      src="/images/hero/shivang-profile.jpg"
+                      alt="Shivang Sharma"
+                      fill
+                      sizes="(max-width: 768px) 256px, 320px"
+                      className="object-cover object-top"
+                      priority
+                    />
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 h-8 w-8 rounded-full bg-mustard" />
@@ -87,13 +95,13 @@ export default function Home() {
       <div className="border-y border-ink/8 py-10">
         <Container>
           <div className="flex flex-col items-center gap-6">
-            <p className="font-mono text-xs uppercase tracking-widest text-muted">
+            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-ink/50">
               Worked with
             </p>
             <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
               {brandLogos.map((logo) => (
                 <div key={logo.name} className="group cursor-default select-none">
-                  <span className="font-sans text-base font-semibold text-ink/30 transition-colors duration-300 group-hover:text-ink">
+                  <span className="font-sans text-lg font-bold text-ink/60 transition-colors duration-300 group-hover:text-ink">
                     {logo.abbr}
                   </span>
                 </div>
@@ -185,7 +193,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-4">
               <Magnetic>
                 <a
-                  href="mailto:tbm26shivang.sharma@mastersunion.org"
+                  href="mailto:shivangsharma1703@gmail.com"
                   className="inline-flex items-center gap-2 rounded-full bg-coral px-7 py-3.5 font-sans text-sm font-medium text-cream transition-colors hover:bg-mustard hover:text-ink"
                 >
                   <Mail className="h-4 w-4" /> Send an email
