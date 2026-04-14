@@ -1,0 +1,67 @@
+---
+slug: ey-techathon
+title: Agentic AI for B2B RFP responses
+tagline: How we rethought enterprise RFPs for the AI era
+category: AI Product
+role: Generalist (product + strategy + tech)
+team: 3 people
+timeline: "2025"
+outcome: Top 50 nationally — EY Techathon 6.0
+deckUrl: https://drive.google.com/file/d/1nc3ntUOUIvmlqCSbEnywLXrELRK0E1Pm/view
+---
+
+## The problem
+
+{/* TODO: 2-3 paragraphs on what's broken about B2B RFP responses today.
+Include: who does this work, how long it takes, why win rates suffer. */}
+
+Enterprise RFP responses are one of the most time-consuming, high-stakes, and under-automated workflows in B2B sales. A single RFP can run to hundreds of pages, require input from legal, finance, technical, and sales teams — and still need to be turned around in 72 hours.
+
+The result? Most companies either miss deadlines, submit generic responses that don't win, or burn out their best people doing copy-paste work that AI should be doing.
+
+<PullQuote>
+The average enterprise loses 40% of winnable RFPs — not because they lack capability, but because they can't respond fast enough with enough specificity.
+</PullQuote>
+
+## Our approach
+
+{/* TODO: Key insight that shaped the solution. Frameworks used. Trade-offs. */}
+
+Our core insight was that an RFP response isn't a writing problem — it's a retrieval and reasoning problem. The company already has the answers. They're buried in past proposals, product docs, case studies, and compliance certificates. The job is to find the right answer, in the right format, in the right tone.
+
+That reframe led us to an agentic architecture: instead of one AI writing everything, multiple specialised agents each own a piece of the workflow.
+
+## What we built
+
+{/* TODO: Walk through the agentic architecture. What agents, what they do,
+how they hand off to each other. */}
+
+A multi-agent system with four key agents working in sequence:
+
+1. **Parser Agent** — Reads the incoming RFP and extracts every question, requirement, and evaluation criterion.
+2. **Retrieval Agent** — Searches the company knowledge base (past proposals, product docs, compliance certs) to surface the most relevant existing content.
+3. **Drafting Agent** — Assembles a first-pass response for each section, citing the retrieved sources.
+4. **Review Agent** — Flags gaps, inconsistencies, and sections that need human review before submission.
+
+<Gallery images={[
+  { src: "/images/projects/ey-techathon/screenshot-1.jpg", alt: "Product overview" },
+  { src: "/images/projects/ey-techathon/screenshot-2.jpg", alt: "Agent workflow" },
+]} />
+
+## The outcome
+
+<Stat value="Top 50" label="EY Techathon 6.0 · India" />
+
+{/* TODO: Judges' feedback, what would be done differently. */}
+
+Selected in the top 50 teams nationally across EY Techathon 6.0. Judges praised the agentic architecture's practical applicability and the clarity of the problem framing.
+
+## What I learned
+
+{/* TODO: Personal reflection — lessons on agentic AI, team work, scope. */}
+
+The biggest lesson: **agentic systems live or die by their retrieval quality.** A brilliant drafting agent is useless if it's working from the wrong source material. We spent more time on the retrieval and chunking strategy than on the agents themselves — and that was the right call.
+
+<Callout type="insight">
+When building agentic systems, optimise the data pipeline first. The quality of outputs is almost entirely determined by the quality of what gets retrieved.
+</Callout>

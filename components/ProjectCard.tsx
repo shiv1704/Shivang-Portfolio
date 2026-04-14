@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, FileText, Presentation } from "lucide-react";
+import Image from "next/image";
 import { Project } from "@/lib/projects";
 
 type ProjectCardProps = {
@@ -21,6 +23,7 @@ function getInitials(title: string) {
 
 export default function ProjectCard({ project, className = "" }: ProjectCardProps) {
   const hasDecks = project.deckUrl && project.deckUrl !== "";
+  const [imgErrored, setImgErrored] = useState(false);
 
   return (
     <motion.article
@@ -29,10 +32,10 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
       className={`group flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white ${className}`}
     >
       {/* Image / placeholder */}
-      <div className="relative flex h-52 items-center justify-center overflow-hidden bg-coral/10">
-        {/* Tilt effect on hover */}
+      <div className="relative flex h-52 items-center justify-center overflow-hidden">
+        {/* Coral placeholder — always rendered, hidden under real image */}
         <motion.div
-          className="flex h-full w-full items-center justify-center bg-coral"
+          className="absolute inset-0 flex items-center justify-center bg-coral"
           whileHover={{ scale: 1.04, rotate: 1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
@@ -40,8 +43,21 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
             {getInitials(project.title)}
           </span>
         </motion.div>
+
+        {/* Real image — sits on top, hides coral when loaded */}
+        {!imgErrored && (
+          <Image
+            src={project.coverImage}
+            alt={project.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 400px"
+            className="object-cover"
+            onError={() => setImgErrored(true)}
+          />
+        )}
+
         {/* Year chip */}
-        <span className="absolute right-4 top-4 rounded-full bg-cream/90 px-3 py-1 font-mono text-xs text-ink">
+        <span className="absolute right-4 top-4 z-10 rounded-full bg-cream/90 px-3 py-1 font-mono text-xs text-ink">
           {project.year}
         </span>
       </div>
@@ -72,8 +88,7 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
         </span>
 
         {/* CTA row */}
-        <div className="mt-auto flex flex-wrap items-center gap-3 pt-4 border-t border-ink/5">
-          {/* Deck */}
+        <div className="mt-auto flex flex-wrap items-center gap-3 border-t border-ink/5 pt-4">
           {hasDecks ? (
             <a
               href={project.deckUrl}
@@ -90,7 +105,6 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
             </span>
           )}
 
-          {/* Case study — flagship only */}
           {project.isFlagship && (
             <Link
               href={`/projects/${project.slug}`}
@@ -101,7 +115,6 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
             </Link>
           )}
 
-          {/* Live link */}
           {project.liveUrl && (
             <a
               href={project.liveUrl}

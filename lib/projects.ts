@@ -18,6 +18,7 @@ export type Project = {
   deckUrl?: string;
   liveUrl?: string;
   isFlagship: boolean;
+  coverImage: string;
 };
 
 export const projects: Project[] = [
@@ -32,6 +33,7 @@ export const projects: Project[] = [
     role: "Product Strategy",
     deckUrl: "https://drive.google.com/file/d/1nc3ntUOUIvmlqCSbEnywLXrELRK0E1Pm/view",
     isFlagship: true,
+    coverImage: "/images/projects/ey-techathon/cover.jpg",
   },
   {
     slug: "why-ai",
@@ -41,8 +43,9 @@ export const projects: Project[] = [
     tagline: "Helping orgs understand where AI actually lands — and where it doesn't.",
     year: "2026",
     role: "Founder",
-    deckUrl: "why-ai-seven.vercel.app",
+    deckUrl: "https://why-ai-seven.vercel.app",
     isFlagship: true,
+    coverImage: "/images/projects/why-ai/cover.jpg",
   },
   {
     slug: "salesgen",
@@ -55,6 +58,7 @@ export const projects: Project[] = [
     deckUrl: "https://salesgen.lovable.app",
     liveUrl: "https://salesgen.lovable.app",
     isFlagship: true,
+    coverImage: "/images/projects/salesgen/cover.jpg",
   },
 
   // ── Secondary ──────────────────────────────────────────────────────────────
@@ -68,6 +72,7 @@ export const projects: Project[] = [
     role: "Brand Strategist",
     deckUrl: "https://drive.google.com/file/d/1pprLxu1Y6EgHSkTLydIS0ry13dDOak4c/view?usp=sharing",
     isFlagship: false,
+    coverImage: "/images/projects/perfora/cover.jpg",
   },
   {
     slug: "idreamcareer",
@@ -79,6 +84,7 @@ export const projects: Project[] = [
     role: "Product Strategist",
     deckUrl: "https://drive.google.com/file/d/1IJNa9zfITsT8YtYANSPLi5ObPxKmG3b-/view?usp=sharing",
     isFlagship: false,
+    coverImage: "/images/projects/idreamcareer/cover.jpg",
   },
   {
     slug: "delhivery",
@@ -90,6 +96,7 @@ export const projects: Project[] = [
     role: "Strategy Consultant",
     deckUrl: "https://drive.google.com/file/d/1r7KdNZ5q62GjVutED1DP_V-80v_GbK-B/view",
     isFlagship: false,
+    coverImage: "/images/projects/delhivery/cover.jpg",
   },
   {
     slug: "la28-olympics",
@@ -101,6 +108,7 @@ export const projects: Project[] = [
     role: "Product Strategy",
     deckUrl: "https://docs.google.com/presentation/d/1ju3Z9dpna3bzohu-mEXVJhLZM0pPZerCB-HEPl9caMA/edit?slide=id.p#slide=id.p",
     isFlagship: false,
+    coverImage: "/images/projects/la28-olympics/cover.jpg",
   },
   {
     slug: "reconnect-india",
@@ -112,6 +120,7 @@ export const projects: Project[] = [
     role: "GTM Lead",
     deckUrl: "https://docs.google.com/presentation/d/1Tq4kwAlvHQ04mIgbPyRExW1cx-Xx9GDz/edit?slide=id.p1#slide=id.p1",
     isFlagship: false,
+    coverImage: "/images/projects/reconnect-india/cover.jpg",
   },
   {
     slug: "panarch",
@@ -123,6 +132,7 @@ export const projects: Project[] = [
     role: "Founder",
     deckUrl: "https://drive.google.com/file/d/1geMXsfeTLPPHp4kiGmgjxY8_qBTMH4_y/view",
     isFlagship: false,
+    coverImage: "/images/projects/panarch/cover.jpg",
   },
   {
     slug: "fampay",
@@ -134,6 +144,7 @@ export const projects: Project[] = [
     role: "Marketing Strategist",
     deckUrl: "https://drive.google.com/file/d/139H_aag4Hx4xdrfsFxx6KHPg3QwCW9OM/view",
     isFlagship: false,
+    coverImage: "/images/projects/fampay/cover.jpg",
   },
   {
     slug: "makemytrip-mice",
@@ -145,6 +156,7 @@ export const projects: Project[] = [
     role: "Product Analyst",
     deckUrl: "https://www.canva.com/design/DAG86GB4MeM/rSHhVI7xzuC6LC-BSOlhOg/edit",
     isFlagship: false,
+    coverImage: "/images/projects/makemytrip-mice/cover.jpg",
   },
   {
     slug: "agoda",
@@ -156,6 +168,7 @@ export const projects: Project[] = [
     role: "UX Strategist",
     deckUrl: "https://www.canva.com/design/DAG-FX658oY/juM7xVLtkyN4D7M6xy_d-w/edit",
     isFlagship: false,
+    coverImage: "/images/projects/agoda/cover.jpg",
   },
   {
     slug: "khelo",
@@ -167,6 +180,7 @@ export const projects: Project[] = [
     role: "Product Lead",
     deckUrl: "https://aistudio.google.com/apps/drive/1ve_P7s5VC7io-6Eo-lyX_ty26M8Ts5ef?fullscreenApplet=true&showPreview=true&showAssistant=true",
     isFlagship: false,
+    coverImage: "/images/projects/khelo/cover.jpg",
   },
   {
     slug: "vittavishwas",
@@ -178,6 +192,7 @@ export const projects: Project[] = [
     role: "Product Strategist",
     deckUrl: "https://www.youtube.com/watch?v=lX6j7NBXtk0",
     isFlagship: false,
+    coverImage: "/images/projects/vittavishwas/cover.jpg",
   },
 ];
 

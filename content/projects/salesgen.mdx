@@ -1,0 +1,67 @@
+---
+slug: salesgen
+title: SalesGen — AI sales enablement
+tagline: A live prototype built on Lovable to explore AI in sales workflows
+category: AI Product
+role: Builder
+team: Solo
+timeline: "2025"
+outcome: Live prototype
+liveUrl: https://salesgen.lovable.app
+---
+
+## Why I built this
+
+SalesGen started as an experiment: could I take an idea from concept to live prototype in a weekend, using AI-first tooling?
+
+The answer is yes — and the process taught me as much about modern product development as the product itself did.
+
+The problem I was exploring: outbound sales is broken. BDRs spend 60% of their time on research and personalisation that produces emails nobody reads. The remaining 40% is actual selling. AI should be flipping that ratio.
+
+<PullQuote>
+The best salespeople I know spend almost no time writing emails. They spend all their time understanding people. SalesGen was built to give everyone that superpower.
+</PullQuote>
+
+## What it does
+
+SalesGen is a sales enablement tool that takes an Ideal Customer Profile (ICP) and generates personalised outreach sequences — emails, LinkedIn messages, and call scripts — tailored to each prospect.
+
+Key flows:
+1. **ICP Definition** — Define your target customer by role, industry, company size, and pain points.
+2. **Prospect Upload** — Upload a list or connect to a data source.
+3. **Sequence Generation** — AI generates a multi-touch outreach sequence, personalised per prospect using public information.
+4. **Review & Export** — Human review before anything goes out. Export to your CRM or email tool.
+
+<Gallery images={[
+  { src: "/images/projects/salesgen/screenshot-1.jpg", alt: "ICP definition screen" },
+]} />
+
+## Key flows
+
+{/* TODO: Walk through 2-3 specific flows with screenshots. */}
+
+The most interesting design challenge was the review step. Early versions just generated and let users send. The problem: users didn't trust it. They wanted to see what the AI was doing and why.
+
+Adding a review layer with visible reasoning — "personalised based on: [Company's Series B announcement]" — dramatically increased trust and, counterintuitively, send rates. People felt in control.
+
+<Callout type="insight">
+In AI-powered tools, showing the reasoning is often more important than the output quality. Trust precedes use.
+</Callout>
+
+## Lessons from building on Lovable
+
+**What worked:**
+- Concept to working prototype in ~8 hours
+- Easy to iterate on UI without writing CSS
+- Good enough for user testing and feedback gathering
+
+**What didn't:**
+- Complex state management got messy quickly
+- Harder to enforce design system consistency
+- Not the right tool for production-grade infrastructure
+
+The right framing: Lovable is excellent for validation. It's not a production stack. I'd use it again for exactly this kind of "does this idea work?" prototype — and then rebuild the core in Next.js if the answer is yes.
+
+## What's next
+
+SalesGen is a prototype, not a product. If the core insight — that AI can make personalised outreach accessible to anyone, not just elite sellers — resonates with you, I'd love to talk about what a full product version could look like.
