@@ -216,7 +216,7 @@ export const projects: Project[] = [
     tagline: "Consumer behaviour positioning for a luxury fragrance: aspiration meets identity.",
     year: "2025",
     role: "Ad Strategist",
-    deckUrl: "PLACEHOLDER_FERRAGAMO_DRIVE_URL",
+    deckUrl: "https://drive.google.com/file/d/1O-4o5-5XaMpGqVTr4HSQme_HWyN74WZb/view",
     isFlagship: false,
     coverImage: "/images/projects/ferragamo/cover.jpg",
   },
