@@ -23,7 +23,7 @@ export const journey: Milestone[] = [
       "Class 12: 92.4%",
       "Led 500+ student events",
     ],
-    image: "/images/journey/st-peters/hero.jpg",
+    image: "/images/journey/st-peters/hero.webp",
     color: "coral",
   },
   {
@@ -34,7 +34,7 @@ export const journey: Milestone[] = [
     subtitle: "BTech Computer Science, with Honors",
     body: "Four years of computer science gave me the foundation I still lean on when thinking about products. CGPA 7.8, Honors degree, and the curiosity that led me into real engineering work.",
     highlights: ["BTech Computer Science, Honors", "CGPA: 7.8/10"],
-    image: "/images/journey/gl-bajaj/hero.jpg",
+    image: "/images/journey/gl-bajaj/hero.webp",
     color: "mustard",
   },
   {
@@ -45,7 +45,7 @@ export const journey: Milestone[] = [
     subtitle: "Software Engineer, Indian Navy RFID Project",
     body: "My first taste of enterprise scale. Automated critical workflows on Newgen's low-code platform for a project that actually mattered: tracking assets for the Indian Navy.",
     highlights: ["Indian Navy RFID automation", "Low-code workflow engineering"],
-    image: "/images/journey/newgen/hero.jpg",
+    image: "/images/journey/newgen/hero.webp",
     color: "ink",
   },
   {
@@ -86,7 +86,7 @@ export const journey: Milestone[] = [
       "Building Why.AI (AI adoption intelligence)",
       "Strategy coursework across 12+ live cases",
     ],
-    image: "/images/journey/masters-union/hero.jpg",
+    image: "/images/journey/masters-union/hero.png",
     color: "coral",
   },
 ];

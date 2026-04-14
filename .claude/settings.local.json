@@ -17,7 +17,16 @@
       "Bash(curl -s https://api.vercel.com/v9/projects/shivang-portfolio -H 'Authorization: Bearer vca_7rsHb7KfoOfMlxMQ33N5n5ydtxUGcYoVxCK130bugjYGAaKMwz36rntF')",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d.get\\('id',''\\), d.get\\('name',''\\)\\)\")",
       "Bash(curl -s -X DELETE https://api.vercel.com/v9/projects/prj_NT5SqJfWdd4EqrN8MCQL8f3GAO5E -H 'Authorization: Bearer vca_7rsHb7KfoOfMlxMQ33N5n5ydtxUGcYoVxCK130bugjYGAaKMwz36rntF' -w '\\\\nHTTP status: %{http_code}')",
-      "Bash(npm list:*)"
+      "Bash(npm list:*)",
+      "Bash(mv beyond-1.JPG beyond-1.jpg)",
+      "Bash(mv beyond-2.JPG beyond-2.jpg)",
+      "Bash(mv beyond-4.JPG beyond-4.jpg)",
+      "Bash(mv shivang-profile.JPG shivang-profile.jpg)",
+      "Bash(mv journey/gl-bajaj/glbajaj-campus-infra25-5.webp journey/gl-bajaj/hero.webp)",
+      "Bash(mv journey/masters-union/MastersUnion_Logo_Facebook.png journey/masters-union/hero.png)",
+      "Bash(mv journey/newgen/newgen-wealth-management-software-500x500.webp journey/newgen/hero.webp)",
+      "Bash(mv \"journey/samsung/SamsungR&D.jpg\" journey/samsung/hero.jpg)",
+      "Bash(mv journey/st-peters/peters.webp journey/st-peters/hero.webp)"
     ]
   }
 }

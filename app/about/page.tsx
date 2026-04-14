@@ -35,7 +35,7 @@ const skills = [
 const beyondWork = [
   { image: "/images/hero/beyond-1.jpg", caption: "Winning together on the field", fallback: "Team" },
   { image: "/images/hero/beyond-2.jpg", caption: "My constant companion", fallback: "Life" },
-  { image: "/images/hero/beyond-3.jpg", caption: "Built and sold at scale", fallback: "Work" },
+  { image: "/images/hero/beyond-3.jpg", caption: "Cricket. Always cricket.", fallback: "Cricket" },
   { image: "/images/hero/beyond-4.jpg", caption: "Leading the Netflix Fraternity", fallback: "Lead" },
 ];
 
@@ -128,9 +128,12 @@ export default function AboutPage() {
       <section className="py-20">
         <Container>
           <p className="font-mono text-xs uppercase tracking-widest text-muted">Beyond work</p>
-          <h2 className="mt-3 mb-10 font-display text-4xl tracking-tight text-ink">
+          <h2 className="mt-3 font-display text-4xl tracking-tight text-ink">
             The rest of the picture.
           </h2>
+          <p className="mt-4 mb-10 max-w-2xl font-sans text-base leading-relaxed text-ink/60">
+            I lead because it&rsquo;s instinctive, not instructed — six years as Cultural Captain at school was just the beginning. Cricket is the reset button: I&rsquo;ve played it my whole life and still feel most like myself on a pitch. Off the field, I&rsquo;m usually with my dog, behind a camera, or on a dance floor. The things I care about tend to involve either a team, a challenge, or both.
+          </p>
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {beyondWork.map((block) => (
