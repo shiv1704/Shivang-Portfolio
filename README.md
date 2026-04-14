@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shivang Sharma — Portfolio Website
 
-## Getting Started
+Personal portfolio built with Next.js 14, Tailwind CSS, Framer Motion, and MDX.
 
-First, run the development server:
+---
+
+## Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript (strict)
+- **Styling**: Tailwind CSS with custom design tokens
+- **Animation**: Framer Motion
+- **Content**: MDX for case studies
+- **Icons**: Lucide React
+- **Deploy**: Vercel
+
+---
+
+## Setup
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to add deck links
 
-## Learn More
+All project data lives in one file: `/lib/projects.ts`
 
-To learn more about Next.js, take a look at the following resources:
+Find the project by `slug` and set `deckUrl` to your embed URL:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```typescript
+{
+  slug: "ey-techathon",
+  // ...
+  deckUrl: "https://docs.google.com/presentation/d/YOUR_ID/embed",
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Getting embed URLs:**
+- **Google Slides**: Share → Published to web → Embed tab → copy the `src` from the `<iframe>`
+- **Figma**: Share → Copy link (prototype viewer URL)
+- **Notion**: Make public → copy the page URL
 
-## Deploy on Vercel
+Once set, the "View deck →" button appears on the card automatically. Empty string = "Deck coming soon" placeholder.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy to Vercel
+
+**Option A — CLI:**
+```bash
+npm i -g vercel
+vercel          # first deploy
+vercel --prod   # production deploys
+```
+
+**Option B — GitHub:**
+1. Push to GitHub
+2. vercel.com → New Project → Import repo
+3. Auto-detected as Next.js — click Deploy
+4. Every push to `main` redeploys automatically
+
+---
+
+## File structure
+
+```
+app/
+  layout.tsx          Root layout (Nav, Footer, CursorGlow, fonts)
+  page.tsx            Homepage
+  journey/            Placeholder (draggable timeline in Session 2)
+  projects/
+    page.tsx          All 14 projects, filterable
+    ey-techathon/     Flagship case study
+    why-ai/           Flagship case study
+    salesgen/         Flagship case study
+  about/              Placeholder
+  contact/            Placeholder
+
+components/
+  Nav.tsx             Sticky nav with mobile slide-over
+  Footer.tsx          Social links footer
+  Container.tsx       max-w-6xl wrapper
+  Section.tsx         py-24 section with optional kicker
+  Magnetic.tsx        Cursor-pull Framer Motion wrapper
+  CursorGlow.tsx      Coral radial gradient follows cursor
+  ProjectCard.tsx     Project card with conditional deck/live/case-study CTAs
+  DeckEmbed.tsx       iframe embed + loading + empty state
+
+lib/
+  projects.ts         Single source of truth for all 14 projects
+
+content/projects/     MDX case studies (Session 2)
+```
+
+---
+
+## Session 2 roadmap
+
+- [ ] Draggable timeline for /journey
+- [ ] Full MDX case studies for EY Techathon, Why.AI, SalesGen
+- [ ] Real photo in hero (replace SS monogram)
+- [ ] LinkedIn / email / Calendly links
+- [ ] Deck URLs for all projects
