@@ -79,7 +79,7 @@ export default function AboutPage() {
                   alt="Shivang Sharma"
                   fill
                   sizes="320px"
-                  className="object-cover"
+                  className="object-cover object-top"
                   fallbackText="Shivang Sharma"
                   priority
                 />

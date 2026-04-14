@@ -106,7 +106,7 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
 
         {/* CTA row — always at bottom */}
         <div className="mt-auto flex flex-wrap items-center gap-3 border-t border-ink/5 pt-4">
-          {hasDecks ? (
+          {hasDecks && (
             <a
               href={project.deckUrl}
               target="_blank"
@@ -116,10 +116,6 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
               <Presentation className="h-3.5 w-3.5" />
               View deck →
             </a>
-          ) : (
-            <span className="inline-flex items-center gap-1.5 font-mono text-xs text-muted/60">
-              Deck coming soon
-            </span>
           )}
 
           {project.isFlagship && (
