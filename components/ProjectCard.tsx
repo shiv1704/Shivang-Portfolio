@@ -114,7 +114,7 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
               className="inline-flex items-center gap-1.5 font-sans text-sm text-coral underline underline-offset-4 hover:text-ink transition-colors"
             >
               <Presentation className="h-3.5 w-3.5" />
-              View deck →
+              {project.deckLabel ?? "View deck"} →
             </a>
           )}
 

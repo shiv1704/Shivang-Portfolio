@@ -18,6 +18,7 @@ export type Project = {
   year: string;
   role: string;
   deckUrl?: string;
+  deckLabel?: string;
   liveUrl?: string;
   isFlagship: boolean;
   coverImage: string;
@@ -217,6 +218,7 @@ export const projects: Project[] = [
     year: "2025",
     role: "Ad Strategist",
     deckUrl: "https://drive.google.com/file/d/1O-4o5-5XaMpGqVTr4HSQme_HWyN74WZb/view",
+    deckLabel: "View Ad",
     isFlagship: false,
     coverImage: "/images/projects/ferragamo/cover.webp",
   },
@@ -229,6 +231,7 @@ export const projects: Project[] = [
     year: "2025",
     role: "Ad Strategist",
     deckUrl: "https://drive.google.com/file/d/1Yg5pRh32j-4MtsFQnTVyIXuokHQqvQHm/view?usp=sharing",
+    deckLabel: "View Ad",
     isFlagship: false,
     coverImage: "/images/projects/fogg/cover.webp",
   },
@@ -241,6 +244,7 @@ export const projects: Project[] = [
     year: "2025",
     role: "Ad Strategist",
     deckUrl: "https://drive.google.com/file/d/1_WV3p6wkwIQLK0yIPiICdxgOVsvMqlo3/view",
+    deckLabel: "View Ad",
     isFlagship: false,
     coverImage: "/images/projects/the-whole-truth/cover.png",
   },
